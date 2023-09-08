@@ -34,7 +34,7 @@ function meuEscopo(){
         const pesO = form.querySelector('#peso').value;
         const alturA = form.querySelector('#altura').value;
 
-        console.log(nome, sobrenome, peso, altura);
+        console.log(nomE, sobrenomE, pesO, alturA);
 
         const info = {
             nome: nomE, // criei um objeto chamado info, que recebia a chava nome e pegava a variavel nome

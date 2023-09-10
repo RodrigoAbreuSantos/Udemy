@@ -1,7 +1,7 @@
 // tanto as funções construtoras, quanto as funções fabricas, elas criam novos objetos. A função fabrica é uma função normal, e ela retorna um objeto, a gente faz ela retornar um objeto voluntariamente. Já a função construtora ela faz muita coisa automaticamente, ela ja cria o objeto e ja retorna o objeto, a unica coisa que vc precisa fazer é criar ela
 
 //função fabrica -> fabrica objetos
-//função construtora -> constroei objetos
+//função construtora -> constroe objetos
 // Na função construtora precisa sempre iniciar seu nome com letra maiscula
 // Construtora -> Pessoa (new). Sempre quando a gente for criar pessoa por exemplo, colocamos a variavel = new Pessoa. Elas são un molde para gerar novos objetos
 

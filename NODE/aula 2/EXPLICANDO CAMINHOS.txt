@@ -1,0 +1,5 @@
+. ==> significa pasta atual que aqui seria no caso aula2
+
+./ ==> dentro da pasta atual
+
+../ ==> vc quer sair da pasta, vc quer voltar

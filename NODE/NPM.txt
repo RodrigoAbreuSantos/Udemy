@@ -1,0 +1,36 @@
+npm init ==> iniciar 
+
+npm install -y ==> para instalmatCardAvatar
+
+-E ==> colocar versão especitdFileSelect 
+
+--save-dev ==> move para dev as dependencias
+
+--save-prod ==> voltar para a produção
+
+ls ==> lista os pacotes
+
+versãoX vai atualizar para a ultima versão. Ex: 4x ==> vai atualizar para a ultima versão 4
+
+outdated ==> ver os pacotes desatualizados 
+
+update ==> atualizar os pacotes
+
+uninstall ==> desinstalar
+
+
+#Remove o node anterior
+
+sudo apt purge --auto-remove nodejs -y
+
+sudo rm /etc/apt/sources.list.d/nodesource.list*
+
+#Instala o Curl
+
+sudo apt install curl -y
+
+#Baixa e Instala o node 12
+
+curl -sl https://deb.nodesource.com/setup_12.x | sudo.bash
+
+sudo apt install nodejs -y

@@ -1,0 +1,46 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Contato</h1>
+      <p class="text-center lead">Crie ou edite seu contato abaixo.</p>
+
+      <%- include('includes/messages') %>
+
+      <% if(contato._id) { %> <!--se o id ja existe vai mudar esse formulario, vai para essa outra rota que vai ser a rota de editar contato -->
+      <form action="/contato/edit/<%= contato._id %>" method="POST">
+      <% } else { %><!--Se o contato não existe vc vai cria-lo-->
+      <form action="/contato/register" method="POST">
+      <% } %>
+        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+        <div class="form-group">
+          <label>Nome</label>
+          <input value="<%= contato.nome %>" type="text" class="form-control" name="nome"><!--esta mostrando o nome do contato, esse contato recebe o que esta dentro do banco de dados, então vai pegar a chave nome dentro de contato e mostrar seu valor-->
+        </div>
+        <div class="form-group">
+          <label>Sobrenome</label>
+          <input value="<%= contato.sobrenome %>" type="text" class="form-control" name="sobrenome"><!--esta mostrando o sobrenome do contato, esse contato recebe o que esta dentro do banco de dados, então vai pegar a chave sobrenome dentro de contato e mostrar seu valor-->
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input value="<%= contato.email %>" type="email" class="form-control" name="email"><!--esta mostrando o email do contato, esse contato recebe o que esta dentro do banco de dados, então vai pegar a chave email dentro de contato e mostrar seu valor-->
+        </div>
+        <div class="form-group">
+          <label>email</label>
+          <input value="<%= contato.email %>" type="tel" class="form-control" name="email"><!--esta mostrando o email do contato, esse contato recebe o que esta dentro do banco de dados, então vai pegar a chave email dentro de contato e mostrar seu valor-->
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </form>
+
+
+    </div>
+    
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

@@ -1,0 +1,39 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Agenda</h1>
+      <p class="text-center lead">Seus contatos estão abaixo</p>
+
+      <%- include('includes/messages') %>
+
+      <% if(contatos.length > 0) { %> <!-- se tiver contatos vai mostrar eles, se não tiver vai parar no else-->
+      <div class="responsive-table">
+        <table class="table my-3">
+          <% contatos.forEach(contato => { %> <!--ja que é um array estamos usando forEach e estamos criando uma array function que vai receber os valores de contato. A cada iteração vai ter um contato nesse valor-->
+          <tr>
+            <td><%= contato.nome %></td>
+            <td><%= contato.sobrenome %></td>
+            <td><%= contato.telefone %></td>
+            <td><%= contato.email %></td>
+            <td><a href="/contato/index/<%= contato._id %>">Editar</a></td><!--se o usuario clicar aqui estamos mandando para a rota/contato/index/contato._id se vc quiser editar-->
+            <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td><!--se o usuario clicar aqui mandaremos para a rota /contato/delete/contato._id-->
+          </tr>
+          <% }); %>
+        </table>
+      </div>
+      <% } else { %> <!--Caso não tenha contatos vai mostrar essa mensagem-->
+        <p class="text-center lead">Não existem contatos na sua agenda.</p>
+      <% } %>
+
+    </div>
+    
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

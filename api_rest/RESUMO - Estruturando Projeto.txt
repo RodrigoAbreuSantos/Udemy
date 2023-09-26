@@ -1,0 +1,8 @@
+Primeiramente criamos uma classe App no app.js dentro do constructor o atributo app recebia o express e na classe tambme tinhamos o metodo para middlewares e routes e depois exportamos esta classe, e essa classe que desencadeou tudo, porque tivemos que criar a classe, depois ir em routes() e das rotas vc importou uma rota, depois vc teve que ir na pasta routes no arquivo homeRoutes, criar uma rota só para a Home e essa rota que vc criou para home ela desencadeou vc ter que criar um controller para jogar no metodo get, que é o mesmo metodo do insomnia. Esse HomeController que vc colocou dentro da rota get ele recebe a req do usuario e responde, então os params são req e res.
+O server vai receber o app e vai fazer o app que é o express escutar na porta 3001
+//
+
+PADRÃO API REST ==> QUANDO CRIA ALGUMA COISA JA OBTEM ELE DE VOLTA
+
+//
+

@@ -23,5 +23,9 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
+    'class-methods-use-this': 'off',
+    'import/firts': 'off',
+    'no-param-reassign': 'off',
+    'eslint': 'disable', //estou desabilitando o eslint que mostra erros em vermelho
   },
 };
